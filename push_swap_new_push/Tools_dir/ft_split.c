@@ -6,7 +6,7 @@
 /*   By: yadib <yadib@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/24 14:37:42 by yadib             #+#    #+#             */
-/*   Updated: 2025/01/22 21:14:32 by yadib            ###   ########.fr       */
+/*   Updated: 2025/01/28 10:58:47 by yadib            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,8 @@ static int	total_arrays_ft(const char *s, char sep)
 			total_arrays++;
 		if (s[index] != sep && s[index] && s[index + 1])
 		{
-			if (s[index] == '-' || s[index] == '+')
+			if ((s[index] == '-' || s[index] == '+')
+				&& (s[index + 1] >= '0' && s[index + 1] <= '9'))
 				index++;
 		}
 		while (s[index] != sep && s[index])

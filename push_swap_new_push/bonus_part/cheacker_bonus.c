@@ -6,7 +6,7 @@
 /*   By: yadib <yadib@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/23 10:52:20 by yadib             #+#    #+#             */
-/*   Updated: 2025/01/26 08:54:23 by yadib            ###   ########.fr       */
+/*   Updated: 2025/01/28 10:55:37 by yadib            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -112,6 +112,7 @@ int	main(int argc, char *argv[])
 	if (read_input(&head_a, &head_b) == PROBLEM)
 		return (ft_lstclear(&head_a), ft_lstclear(&head_b)
 			, write(2, "Error\n", 7), 1);
+	is_sort = check_is_sort(&head_a);
 	if (is_sort == PROBLEM || head_b != NULL)
 		return (ft_lstclear(&head_a), ft_lstclear(&head_b)
 			, write(1, "KO\n", 3));
